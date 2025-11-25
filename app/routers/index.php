@@ -1,5 +1,7 @@
 <?php
+if (isset($_GET['books'])):
 
+    include '../app/routers/books.php';
 //ROUTE par défaut
 
 //PATTERN : /
@@ -7,4 +9,6 @@
 //CTRL: pageController
 
 //ACTION: home
-\App\Controllers\PagesController::homeAction();
+else:
+    \App\Controllers\PagesController::homeAction();
+endif;
