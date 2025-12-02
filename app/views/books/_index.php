@@ -2,7 +2,7 @@
     <?php foreach ($books as $book): ?>
         <li>
             <a href="books/<?php echo $book->id ?>" class="text-blue-500 hover:underline">
-                <?php echo $book->id; ?>
+                <?php echo $book->title; ?>
             </a> -
             <!-- on va tronquer le resume -->
             <?php echo \Core\Helpers::truncate($book->resume, 30); ?>
